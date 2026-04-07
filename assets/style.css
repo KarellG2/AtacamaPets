@@ -1,0 +1,12 @@
+#Titulo{
+    color: #fff;
+}
+#Navbar{
+    background: #2E8B57;
+    background: linear-gradient(90deg,rgb(54, 162, 101) 15%, rgba(64, 207, 128, 1) 50%, rgba(0, 237, 99, 1) 100%)
+}
+#AtacamaPets{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 28px;
+    color: #f0f0f0;
+}
