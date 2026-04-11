@@ -6,25 +6,75 @@
     --negro : #0d1f1c;
     --gris : #e6e8e6;
     --blanco: #ffffff;
-    --grad: linear-gradient(135deg, --celeste 0%, --verde 100%);
+    --brillo: #0ff;
+    --grad: linear-gradient(135deg, #29b89e 0%, #a8d44a 100%);
+    --transition: background-color 0.33s ease-in-out, color .33s ease-in-out;
+    --transform: scale(108%);
+    --transform_link: scale(112%);
+    --link_focus: scale(95%)
 }
+/* NAVBAR */
 .navbar-brand{
-    color: var(--verde);
+    color: var(--gris);
     font-family: 'DM Sans', sans-serif;
-
-}
-body{
-    background: var(--gris);
-    overflow-x: hidden;
-    font-family: 'DM Sans', sans-serif;
+    font-size: 34px;
+    transition: var(--transition);
 }
 
+.navbar-brand:hover{
+    color: var(--celeste);
+    text-shadow: 0 0 2px var(--brillo), 0 0 2px var(--brillo);
+    transform: var(--transform);
+}
 
 .navbar {
-    background: rgba(13,31,28,.92);
+    background: var(--negro);
     color: var(--verde);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(255,255,255,.08);
     padding: 16px 32px;
+}
+
+/* BOTONES DE NAVEGACION */
+.nav-link{
+    color: var(--gris);
+    transition: var(--transition);
+    font-size: 18px;
+}
+.nav-link:hover{
+    color: var(--verde);
+    transform: var(--transform_link);
 
 }
+.nav-link:focus{
+    color: var(--brillo);
+    text-shadow: 0 0 2px var(--brillo), 0 0 2px var(--brillo);
+    transform: var(--link_focus);
+}
+/* NAVBAR AGENDAR HORA */
+.btn-primary{
+    background: var(--grad);
+    color: var(--negro);
+    border-radius: 50px;
+    border-color: var(--brillo);
+    font-size: 18px;
+    transition: var(--transition);
+    width: 165px;
+}
+.btn-primary:hover{
+    text-shadow: 0 0 1px var(--brillo), 0 0 1px var(--brillo);
+    transform: var(--transform);
+    color: var(--gris);
+
+}
+
+/* CUERPO */
+body{
+    background: var(--grad);
+    overflow-x: hidden;
+    font-family: 'DM Sans', sans-serif;
+}
+strong{
+    color: var(--verde);
+}
+
