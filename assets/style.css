@@ -1,12 +1,30 @@
-#Titulo{
-    color: #fff;
+/* COLORES PRINCIPALES */
+:root{
+    --azul : #1a7a6e;
+    --celeste : #29b89e;
+    --verde :    #a8d44a;
+    --negro : #0d1f1c;
+    --gris : #e6e8e6;
+    --blanco: #ffffff;
+    --grad: linear-gradient(135deg, --celeste 0%, --verde 100%);
 }
-#Navbar{
-    background: #2E8B57;
-    background: linear-gradient(90deg,rgb(54, 162, 101) 15%, rgba(64, 207, 128, 1) 50%, rgba(0, 237, 99, 1) 100%)
+.navbar-brand{
+    color: var(--verde);
+    font-family: 'DM Sans', sans-serif;
+
 }
-#AtacamaPets{
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 28px;
-    color: #f0f0f0;
+body{
+    background: var(--gris);
+    overflow-x: hidden;
+    font-family: 'DM Sans', sans-serif;
+}
+
+
+.navbar {
+    background: rgba(13,31,28,.92);
+    color: var(--verde);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,.08);
+    padding: 16px 32px;
+
 }
