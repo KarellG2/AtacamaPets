@@ -8,6 +8,7 @@
     --blanco: #ffffff;
     --brillo: #0ff;
     --grad: linear-gradient(135deg, #29b89e 0%, #a8d44a 100%);
+    --grad_oscuro: linear-gradient(75deg, #a8d44a 0%, #116931 100%);
     --transition: background-color 0.33s ease-in-out, color .33s ease-in-out;
     --transform: scale(108%);
     --transform_link: scale(112%);
@@ -67,14 +68,50 @@
     color: var(--gris);
 
 }
+.btn-primary:focus{
+    transform: var(--link_focus);
+}
 
 /* CUERPO */
 body{
-    background: var(--grad);
+    background: var(--negro);
     overflow-x: hidden;
     font-family: 'DM Sans', sans-serif;
+    padding-top: 80px;
 }
 strong{
     color: var(--verde);
 }
 
+section{
+    margin-top: 80px;
+}
+/* COPIADO DESDE: https://stackoverflow.com/questions/75713480/how-to-make-a-smooth-blob-animation-in-css */
+.hero::before {
+    pointer-events: none;
+    content: '';
+    position: absolute;
+    width: 700px; height: 700px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 50% 50%, #29b89e55 0%, transparent 70%);
+    top: -150px; 
+    left: -150px;
+    animation: blobFloat 4s ease-in-out infinite alternate;
+
+}
+@keyframes blobFloat {
+    from { transform: translate(0,0) scale(1); }
+    to   { transform: translate(40px, 30px) scale(1.08); }
+}
+/*  */
+.texto-hero{
+    color: var(--blanco);
+}
+.hero img{
+    height: 400px;
+    width: 700px;
+    max-width: 120%;
+    max-height: 120%;
+    border-radius: 5%;
+    box-shadow: 5px 5px 10px rgba(100, 100, 100, 0.5);
+}   
