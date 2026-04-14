@@ -4,11 +4,12 @@
     --celeste : #29b89e;
     --verde :    #a8d44a;
     --negro : #0d1f1c;
-    --gris : #e6e8e6;
+    --gris : #d1d3d1;
     --blanco: #ffffff;
     --brillo: #0ff;
     --grad: linear-gradient(135deg, #29b89e 0%, #a8d44a 100%);
-    --grad_oscuro: linear-gradient(75deg, #a8d44a 0%, #116931 100%);
+    --grad-card: linear-gradient(15deg, #00ffd0 0%, #aeff00bf 100%);
+    /* --grad_oscuro: linear-gradient(75deg, #a8d44a 0%, #116931 100%); */
     --transition: background-color 0.33s ease-in-out, color .33s ease-in-out;
     --transform: scale(108%);
     --transform_link: scale(112%);
@@ -97,6 +98,7 @@ section{
     top: -150px; 
     left: -150px;
     animation: blobFloat 4s ease-in-out infinite alternate;
+    z-index: 0;
 
 }
 @keyframes blobFloat {
@@ -107,6 +109,10 @@ section{
 .texto-hero{
     color: var(--blanco);
 }
+.hero .container{
+    position: relative;
+    z-index: 1;
+}
 .hero img{
     height: 400px;
     width: 700px;
@@ -115,3 +121,76 @@ section{
     border-radius: 5%;
     box-shadow: 5px 5px 10px rgba(100, 100, 100, 0.5);
 }   
+
+/* SERVICIOS */
+.services{
+    background-color: var(--gris);
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.services-title{
+    margin-top: 25px;
+    color: var(--gris);
+    text-align: center;
+}
+/* CARTAS */
+.card-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fil, minmax(250px,1fr));
+    gap: 24px;
+    margin-top: 30px;
+}
+.card{
+    background: var(--grad-card);
+    border: 1px solid gray;
+    border-radius: 24px;
+    box-shadow: 0 15px 45px gray;
+    display: flex;
+    flex-direction: column;
+    min-height: 300px;
+    padding: 30px;
+    margin-left: 55px;
+    margin-top: 35px;
+}
+.card h1{
+    font-size: 25px;
+}
+.card:hover{
+    transform: translateY(10px);
+}
+
+/* FOOTER */
+.footer-container{
+    background:var(--negro) ;
+}
+footer h4{
+    color: var(--gris);
+    margin-top: 25px;
+    text-align: center;
+    font-size: 35px;
+    letter-spacing: 2px;
+}
+footer p{
+    color: var(--gris);
+}
+footer ul a{
+    color: var(--gris);
+    list-style: none;
+    text-decoration: none;
+}
+/* INFORMACION EMPRESARIAL / QUIENES SOMOS */
+h2{
+    color: var(--verde);
+    text-align: center;
+    font-size: 35px;
+}
+.emp-info p{
+    color: var(--gris);
+}
+/* CONTACTOS */
+.map{
+    justify-content: center;
+    display: flex;
+    margin-top: 25px;
+}

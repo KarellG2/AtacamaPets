@@ -12,60 +12,171 @@
 <body>
     <!-- NAVBAR -->
     <!-- todo: navbar, botones de navegacion, logo empresarial  -->
-    <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">Atacama<strong>Pets</strong></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        <!-- BOTONES NAVBAR -->
-            <div class="collapse navbar-collapse">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#servicios">Servicios</a>
-                    </li>
+     <header>
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#">Atacama<strong>Pets</strong></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            <!-- BOTONES NAVBAR -->
+                <div class="collapse navbar-collapse">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#servicios">Servicios</a>
+                        </li>
 
-                    <li class="nav-item ms-lg-4 active">
-                        <a class="nav-link" href="#nosotros">Nosotros</a>
-                    </li>
+                        <li class="nav-item ms-lg-4 active">
+                            <a class="nav-link" href="#nosotros">Nosotros</a>
+                        </li>
 
-                    <li class="nav-item ms-lg-4 active">
-                        <a class="nav-link" href="#contacto">Contacto</a>
-                    </li>
-                    
-                    <li class="nav-item ms-lg-4 active">
-                        <a type="button" class="btn btn-primary" href="#contacto">Agendar Hora</a>
-                    </li>
+                        <li class="nav-item ms-lg-4 active">
+                            <a class="nav-link" href="#contacto">Contacto</a>
+                        </li>
+                        
+                        <li class="nav-item ms-lg-4 active">
+                            <a type="button" class="btn btn-primary" href="#contacto">Iniciar Sesion</a>
+                        </li>
 
-                </ul>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
     <!-- HERO -->
     <!-- todo: Imagenes, mision-vision, quienes somos, que hacemos, ubicacion, etc -->
-    <section class="hero container mt-4">
-        <div class="row align-items-center">
-            <div class="col-lg-6 texto-hero">
-                <!-- parte de arriba del titulo/ mini descripcion -->
-                <p>Clinica Veterinaria: Copiapo, Chile</p>
-                <h1 class="display-4 fw-bold mb-3">El Mejor Cuidado para tus Mascotas</h1>
-                <p class="lead mb-4"> 
-                    Medicina preventiva, urgencias y especialidades.</p>
+    
+    <main>
+        <section class="hero container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 texto-hero"><br><br>
+                    <h1 class="display-4 fw-bold mb-3">El Mejor Cuidado para tus Mascotas</h1>
+                    <p class="lead mb-4"> 
+                        Medicina preventiva, urgencias y especialidades.</p>
 
-                <a href="#" class="btn btn-primary btn-lg" style="width: 200px;">
-                    Agendar Consulta
-                </a>
+                    <a href="#" class="btn btn-primary btn-lg" style="width: 200px;">
+                        Agendar Consulta
+                    </a>
+                    </div>
 
+                    <div class="col-lg-6">
+                        <img src="assets/img/hero_img1.jpg" alt="Veterinarian Taking Care of a Dog">
+                    </div>
+            </div>
+
+        </section>
+        
+        <!-- SECCION SERVICIOS -->
+
+        <section class="servicios container mt-5" id="servicios">
+            <h2 class="text center mb-4">Servicios</h2>
+            
+            <div class="row">
+
+                <div class="col-md-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card content.</p>
+                        </div>
+                    </div>
                 </div>
 
-            <div class="col-lg-6">
-                <img src="assets/img/hero_img1.jpg" alt="Veterinarian Taking Care of a Dog">
-            </div>
-        </div>
-        
-    </section>
+                <div class="col-md-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card content.</p>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="col-md-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card content.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+        <!-- SECCION INFORMACION EMPRESARIAL / QUIENES SOMOS -->
+        <section class="emp-info container" id="nosotros">
+            <h2>¿Quienes Somos?</h2>
+            <p>placeholder</p>
+            <div class="row">
+                <div style="color: white;">PlaceHolder</div>
+            </div>
+            
+        </section>
+
+        <!-- SECCION CONTACTOS -->
+        <section class="emp-contact" id="contactos">
+            <h2>Contactanos</h2>
+            <p>PlaceHolder</p>
+
+            <div class="row">
+                <div style="color: white;">placceholder</div>
+            </div>
+
+        </section>
+         
+        <section class="emp-ubication">
+            <h2>Donde Encontrarnos</h2>
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3474.554534727577!2d-70.34828170481663!3d-27.358946226211618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x969803ed8690e2bf%3A0xdbc12fea97072124!2sLas%20Heras%20344%2C%201530000%20Copiap%C3%B3%2C%20Atacama!5e0!3m2!1ses-419!2scl!4v1776186924700!5m2!1ses-419!2scl" width="650" height="550" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+    </main>
     <!-- FOOTER -->
      <!-- TODO: contactos, acerca de nosotros -->
-</body>
+    <div class="container footer-container my-5">
+        <footer>
+            <!-- TEXTO FINAL BONITO / FOOTER -->
+            <div class="container p-4">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12 mb-4">
+                        <h4 class="mb-3">Footer</h4>
+                        <p>example text placeholder</p>
+
+                    </div>
+                    <!-- LINKS -->
+                    <div class="col-lg-3 col-md-6">
+                        <h4 class="mb-3">Enlaces</h5>
+                        <ul>
+                            <li><a href="#servicios">Servicios</a></li>
+                            <li><a href="#nosotros">Nosotros</a></li>
+                            <li><a href="#contactos">Contactos</a></li>
+                            <li><a href="#">Agendar Hora</a></li>
+
+                        </ul>
+                    </div>
+                    <!-- HORARIO -->
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <h4>Horario</h4>
+                        <tbody>
+                            <tr>
+                                
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    </body>
 </html>
