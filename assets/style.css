@@ -14,6 +14,15 @@
     --transform_link: scale(112%);
     --link_focus: scale(95%)
 }
+/* FUENTES */
+h1, h2, h3, h4, h5 {
+    font-family: 'Fraunces', serif;
+    line-height: 1.1;
+}
+
+h2,h3,h4{
+    font-size: 40px;
+}
 /* NAVBAR */
 .navbar-brand{
     color: var(--gris);
@@ -35,7 +44,10 @@
     border-bottom: 1px solid rgba(255,255,255,.08);
     padding: 16px 32px;
 }
-
+.navbar .navbar-toggler-icon{
+    opacity: 75%;
+    background-color: var(--verde) !important;
+}
 /* BOTONES DE NAVEGACION */
 .nav-link{
     color: var(--gris);
@@ -94,11 +106,16 @@ section{
     width: 700px; height: 700px;
     border-radius: 50%;
     background: radial-gradient(circle at 50% 50%, #29b89e55 0%, transparent 70%);
-    top: -150px; 
-    left: -150px;
+    top: -15%; 
+    left: -15%;
     animation: blobFloat 4s ease-in-out infinite alternate;
     z-index: 0;
-
+}
+@media (max-width: 768px) {
+    .hero::before {
+        width: 400px; height: 500px;
+        top: -25%; left: -25%;
+    }
 }
 @keyframes blobFloat {
     from { transform: translate(0,0) scale(1); }
@@ -146,7 +163,6 @@ section{
     transform: scale(1.05); 
 }
 
-
 /* SERVICIOS */
 h5{
     font-size: 25px;
@@ -168,7 +184,9 @@ h5{
     height: 750px;
 }
 .carousel-inner .carousel-caption{
-    color: var(--negro);
+    color: var(--blanco);
+    background-color: var(--negro);
+    opacity: 75%;
     font-size: 20px;
     font-weight: bold;
 }
@@ -235,13 +253,15 @@ h5{
     grid-template-columns: repeat(2, minmax(300px, 1fr)); 
     gap: 20px;
     margin-top: 30px;
-    padding: 0 50px; 
+    padding-left: 20%; 
     justify-content: center;
+
 }
 @media (max-width: 768px) {
     .card-container-contact {
         grid-template-columns: 1fr;
-        padding: 0 20px;
+        padding-left: 20%;
+        
     }
 }
 
@@ -253,7 +273,6 @@ footer h4{
     color: var(--gris);
     margin-top: 25px;
     text-align: center;
-    font-size: 35px;
     letter-spacing: 2px;
 }
 footer p{
@@ -272,7 +291,6 @@ footer ul a{
 h2{
     color: var(--verde);
     text-align: center;
-    font-size: 35px;
     padding-bottom: 35px;
 }
 .emp-info p{
@@ -284,11 +302,21 @@ h2{
     display: flex;
     margin-top: 25px;
 }
+.contact-logo{
+    width: 25px;
+    height: 25px;
+
+}
 /* --- SECCIÓN ESPECIALIDADES --- */
 #especialidades {
-    background-color: var(--negro); 
-    padding: 80px 0;
-    width: 100%;
+background-color: var(--negro); 
+padding: 80px 0;
+width: 100%;
+}
+@media (max-width: 768px){
+    #especialidades .carousel-inner .carousel-item{
+        height: 100%;
+    }
 }
 #especialidades .services-title {
     color: var(--verde); 
@@ -315,4 +343,7 @@ h2{
 }
 .footer-logo:hover {
     transform: scale(1.1); 
+}
+.footer-container{
+
 }
