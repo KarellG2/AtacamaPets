@@ -9,7 +9,6 @@
     --brillo: #0ff;
     --grad: linear-gradient(135deg, #29b89e 0%, #a8d44a 100%);
     --grad-card: linear-gradient(15deg, #00ffd0 0%, #aeff00bf 100%);
-    /* --grad_oscuro: linear-gradient(75deg, #a8d44a 0%, #116931 100%); */
     --transition: background-color 0.33s ease-in-out, color .33s ease-in-out;
     --transform: scale(108%);
     --transform_link: scale(112%);
@@ -87,8 +86,8 @@ strong{
 section{
     margin-top: 80px;
 }
-/* COPIADO DESDE: https://stackoverflow.com/questions/75713480/how-to-make-a-smooth-blob-animation-in-css */
 .hero::before {
+    /* COPIADO DESDE: https://stackoverflow.com/questions/75713480/how-to-make-a-smooth-blob-animation-in-css */
     pointer-events: none;
     content: '';
     position: absolute;
@@ -108,6 +107,10 @@ section{
 /*  */
 .texto-hero{
     color: var(--blanco);
+}
+.hero{
+    margin-top: 175px;
+    margin-bottom: 245px;
 }
 .hero .container{
     position: relative;
@@ -145,6 +148,10 @@ section{
 
 
 /* SERVICIOS */
+h5{
+    font-size: 25px;
+    font-weight: bold;
+}
 .services{
     background-color: var(--gris);
     position: relative;
@@ -156,6 +163,18 @@ section{
     color: var(--gris);
     text-align: center;
 }
+
+.carousel-inner .carousel-item {
+    height: 750px;
+}
+.carousel-inner .carousel-caption{
+    color: var(--negro);
+    font-size: 20px;
+    font-weight: bold;
+}
+.somos p{
+    font-size: 20px;
+}
 /* CARTAS */
 .card-container {
     display: grid;
@@ -166,7 +185,7 @@ section{
     justify-content: center;
 }
 .card{
-    background: var(--grad-card);
+    background: var(--grad-card) !important;
     border: none; 
     border-radius: 24px;
     box-shadow: 0 10px 20px rgba(0,0,0,0.2);
@@ -177,6 +196,10 @@ section{
     opacity: 0;
     transform: translateY(20px); 
     animation: slideIn 0.8s ease forwards;
+    transition: 0.3s;
+}
+.servicios .card .card-body{
+    color: var(--negro);
 }
 .card:nth-child(1){
     animation-delay: 0.2s;
@@ -198,7 +221,28 @@ section{
     font-size: 25px;
 }
 .card:hover{
-    transform: translateY(10px);
+    transform: translateY(10px)!important;
+}
+
+/* CONTACTOS */
+.emp-contact .card{
+    width: 100%;
+    margin-left: 0;
+}
+
+.card-container-contact {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(300px, 1fr)); 
+    gap: 20px;
+    margin-top: 30px;
+    padding: 0 50px; 
+    justify-content: center;
+}
+@media (max-width: 768px) {
+    .card-container-contact {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+    }
 }
 
 /* FOOTER */
@@ -220,11 +264,16 @@ footer ul a{
     list-style: none;
     text-decoration: none;
 }
+.redes img{
+    width: 10%;
+    height: 10%;
+}
 /* INFORMACION EMPRESARIAL / QUIENES SOMOS */
 h2{
     color: var(--verde);
     text-align: center;
     font-size: 35px;
+    padding-bottom: 35px;
 }
 .emp-info p{
     color: var(--gris);
@@ -246,6 +295,7 @@ h2{
     font-weight: bold;
     font-size: 2.5rem;
 }
+
 /* ANIMACION DE ENTRADA HERO */
 @keyframes slideIn {
     to {

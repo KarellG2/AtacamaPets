@@ -8,6 +8,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 <!-- CSS -->
     <link rel="stylesheet" href="assets/style.css">
+<!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
     <!-- NAVBAR -->
@@ -16,12 +18,12 @@
         <nav class="navbar navbar-expand-lg fixed-top">
             <div class="container">
                 <a class="navbar-brand" href="#">Atacama<strong>Pets</strong></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
             <!-- BOTONES NAVBAR -->
-                <div class="collapse navbar-collapse">
-                    <ul class="navbar-nav ms-auto">
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <ul class="navbar-nav ms-auto">
                         <li class="nav-item active">
                             <a class="nav-link" href="#servicios">Servicios</a>
                         </li>
@@ -68,95 +70,123 @@
         
         <!-- SECCION SERVICIOS -->
 
-          <section class="servicios container mt-5" id="servicios">
-    <h2 class="text-center mb-4">Nuestros Servicios</h2>
-    
-    <div class="row">
+    <section class="servicios container mt-5" id="servicios">
+        <h2 class="text-center mb-4">Nuestros Servicios</h2>
+        <div class="row">
 
-        <!-- Servicio 1 -->
-        <div class="col-md-4">
-            <div class="card">
-                <img src="assets/img/Consultas.jpg" class="card-img-top" alt="Consulta veterinaria">
-                <div class="card-body">
-                    <h5 class="card-title">Consultas Generales</h5>
-                    <p class="card-text">
-                        Atención médica completa para mascotas, chequeos preventivos y diagnóstico de enfermedades.
-                    </p>
+            <!-- Servicio 1 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="assets/img/Consultas.jpg" class="card-img-top" alt="Consulta veterinaria">
+                    <div class="card-body">
+                        <h5 class="card-title">Consultas Generales</h5>
+                        <p class="card-text">
+                            Atención médica completa para mascotas, chequeos preventivos y diagnóstico de enfermedades.
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Servicio 2 -->
-        <div class="col-md-4">
-            <div class="card">
-                <img src="assets/img/Vacunacion.jpg" class="card-img-top" alt="Vacunación de mascotas">
-                <div class="card-body">
-                    <h5 class="card-title">Vacunación</h5>
-                    <p class="card-text">
-                        Programas de vacunación para proteger a tu mascota contra enfermedades comunes.
-                    </p>
+            <!-- Servicio 2 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="assets/img/Vacunacion.jpg" class="card-img-top" alt="Vacunación de mascotas">
+                    <div class="card-body">
+                        <h5 class="card-title">Vacunación</h5>
+                        <p class="card-text">
+                            Programas de vacunación para proteger a tu mascota contra enfermedades comunes.
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Servicio 3 -->
-        <div class="col-md-4">
-            <div class="card">
-                <img src="assets/img/Urgencias.jpg" class="card-img-top" alt="Urgencias veterinarias">
-                <div class="card-body">
-                    <h5 class="card-title">Urgencias 24/7</h5>
-                    <p class="card-text">
-                        Atención inmediata ante emergencias médicas para garantizar la seguridad de tu mascota.
-                    </p>
+            <!-- Servicio 3 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="assets/img/Urgencias.jpg" class="card-img-top" alt="Urgencias veterinarias">
+                    <div class="card-body">
+                        <h5 class="card-title">Urgencias 24/7</h5>
+                        <p class="card-text">
+                            Atención inmediata ante emergencias médicas para garantizar la seguridad de tu mascota.
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
 
-    </div>
+        </div>
 </section>
 
+
 <!-- SECCION NUESTRAS ESPECIALIDADES-->
-    <section id="especialidades" class="py-5"> <h2 class="services-title mb-5">Nuestras Especialidades</h2>
+
+
+
+<section id="especialidades" class="container mt-5"> <h2 class="services-title mb-5">Nuestras Especialidades</h2>
     
-    <div class="card-container">
-        <article class="card p-3">
-            <img src="assets/img/Medicina.jpg" class="card-img-top" alt="Veterinario realizando examen clínico">
-            <div class="card-body text-white">
-                <h3 class="h5 card-title mt-2">Medicina General</h3>
-                <p class="card-text small text-secondary">Chequeos preventivos y diagnósticos precisos para la salud diaria de tu mascota.</p>
-            </div>
-        </article>
+        <div id="carouselIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+            <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
 
-        <article class="card p-3">
-            <img src="assets/img/cirugia.jpg" class="card-img-top" alt="Mascota en área de cirugía">
-            <div class="card-body text-white">
-                <h3 class="h5 card-title mt-2">Cirugías Especializadas</h3>
-                <p class="card-text small text-secondary">Contamos con quirófano equipado para procedimientos de alta y baja complejidad.</p>
-            </div>
-        </article>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                <img src="assets/img/Medicina.png" class="d-block w-100 h-100" alt="Veterinario realizando examen clínico">
 
-        <article class="card p-3">
-            <img src="assets/img/peluqueria.jpeg" class="card-img-top" alt="Perro en peluquería canina">
-            <div class="card-body text-white">
-                <h3 class="h5 card-title mt-2">Peluquería y Estética</h3>
-                <p class="card-text small text-secondary">Baños sanitarios y cortes de raza para que luzcan siempre bien.</p>
+                <div class="carousel-caption">
+                    <h5>Medicina General</h5>
+                    <p>Chequeos preventivos y diagnósticos precisos para la salud diaria de tu mascota.</p>
+                </div>
             </div>
-        </article>
-    </div>
+
+                <div class="carousel-item">
+                <img src="assets/img/cirugia.jpg" class="d-block w-100 h-100" alt="Mascota en área de cirugía">
+
+                <div class="carousel-caption">
+                    <h5>Cirugías Especializadas</h5>
+                    <p>Contamos con quirófano equipado para procedimientos de alta y baja complejidad.</p>
+                </div>
+
+            </div>
+
+                <div class="carousel-item">
+                <img src="assets/img/peluqueria.jpeg" class="d-block w-100 h-100" alt="Perro en peluquería canina">
+                    
+                <div class="carousel-caption" style="color: white;">
+                    <h5>Peluquería y Estética</h5>
+                    <p>Baños sanitarios y cortes para que luzcan siempre bien.</p>
+                </div>
+    
+            </div>
+
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+            </div>
+
+</section>
+
     
 </section>
 
         <!-- SECCION INFORMACION EMPRESARIAL / QUIENES SOMOS -->
        <section class="emp-info container py-5" id="nosotros">
-    <div class="row align-items-center">
+    <div class="somos row align-items-center">
         
         <!-- TEXTO -->
         <div class="col-lg-6 text-dark">
             <h2 class="mb-4">¿Quiénes Somos?</h2>
-            <p>
+            <p class="parrafo-informativo">
                 En <strong>AtacamaPets</strong> Somos una clínica veterinaria comprometida con la salud y bienestar de tus mascotas. 
                 Contamos con un equipo de profesionales altamente capacitados que brindan atención integral, desde medicina preventiva,
-                urgencias, cirugías especializada y peluqueria canina.
+                urgencias, cirugías especializada y peluqueria.
             </p>
 
             <p>
@@ -165,66 +195,62 @@
             </p>
              </div>
              <div class="col-md-6 text-center">
-      <img src="../AtacamaPets/ somos.jpeg" alt="Clínica veterinaria">
+      <img src="assets/img/quienes somos.jpeg" alt="Clínica veterinaria" class="img-fluid hero-img">
     </div>
    
             
         </div>
         <!-- SERVICIOS -->
-<section id="servicios">
-  ...
-</section>
+    <section id="servicios">
+    ...
+    </section>
 
-<section id="nosotros" class="container my-5">
-  <div class="row align-items-center">
+    <section id="nosotros" class="container my-5">
+        <div class="row align-items-center">
 
-    <div class="col-md-6">
+            <div class="col-md-6">
 
+            </div>
     </div>
 
-
-
-  </div>
-</section>
+    </section>
         </section>
 
         <!-- SECCION CONTACTOS -->
-        <section class="emp-contact" id="contactos">
-            <h2>Contactanos</h2>
+    <section class="emp-contact" id="contactos">
+        <h2>Contactanos</h2>
 
-            <div class="row">
+        <div class="card-container-contact g-4">
+
+            <div class="col-lg-6">
+                <div class="card h-100 text-center shadow-sm p-3">
+                <h5>📍 Ubicación</h5>
+                <p class="mb-0">Copiapó, Chile</p>
+                </div>
             </div>
-            <div class="row g-4">
 
-  <div class="col-md-3">
-    <div class="card h-100 text-center shadow-sm p-3">
-      <h5>📍 Ubicación</h5>
-      <p class="mb-0">Copiapó, Chile</p>
-    </div>
-  </div>
+            <div class="col-lg-6">
+                <div class="card h-100 text-center shadow-sm p-3">
+                <h5>📞 Teléfono</h5>
+                <p class="mb-0">+56 9 1234 5678</p>
+                </div>
+            </div>
 
-  <div class="col-md-3">
-    <div class="card h-100 text-center shadow-sm p-3">
-      <h5>📞 Teléfono</h5>
-      <p class="mb-0">+56 9 1234 5678</p>
-    </div>
-  </div>
+            <div class="col-lg-6">
+                <div class="card h-100 text-center shadow-sm p-3">
+                <h5>✉️ Email</h5>
+                <p class="mb-0">contacto@atacamapets.cl</p>
+                </div>
+            </div>
 
-  <div class="col-md-3">
-    <div class="card h-100 text-center shadow-sm p-3">
-      <h5>✉️ Email</h5>
-      <p class="mb-0">contacto@atacamapets.cl</p>
-    </div>
-  </div>
+            <div class="col-lg-6">
+                <div class="card h-100 text-center shadow-sm p-3">
+                <h5>⏰ Horario</h5>
+                <p class="mb-0">Lunes a Sábado<br>9:00 - 18:00</p>
+                </div>
+            </div>
 
-  <div class="col-md-3">
-    <div class="card h-100 text-center shadow-sm p-3">
-      <h5>⏰ Horario</h5>
-      <p class="mb-0">Lunes a Sábado<br>9:00 - 18:00</p>
-    </div>
-  </div>
-
-</div>
+        </div>
 
         </section>
          
@@ -235,9 +261,10 @@
             </div>
         </section>
         <div class="row justify-content-center">
+
   <div class="col-md-8">
 
-    <div class="card shadow p-4">
+    <div class="card shadow p-4 mt-5">
       <h5 class="text-center mb-3">Envíanos un mensaje</h5>
 
       <form>
@@ -283,16 +310,16 @@
     <div class="container p-4">
         <div class="row">
 
-            <div class="col-lg-4 col-md-12 mb-4">
+            <div class="col-lg-3 col-md-12 mb-4">
                 <a href="https://www.instagram.com/atacamapets/" target="_blank" class="footer-logo-link">
-    <img src="assets/img/LOGO_ATACAMAPETS.JPG" alt="Ir al Instagram de Atacama Pets" class="footer-logo">
+    <img src="assets/img/logo.jpg" alt="Ir al Instagram de Atacama Pets" class="footer-logo">
 </a>
                 <p>📧 atacamapets@gmail.com</p>
                 <p>📍 Las Heras 344, Copiapó, Atacama</p>
                 <p>📞 +56 9 7618 1520</p>
             </div>
 
-            <div class="col-lg-4 col-md-6">
+            <div class="col-lg-3 col-md-6">
                 <h4>Enlaces</h4>
                 <ul>
                     <li><a href="#servicios">Servicios</a></li>
@@ -302,7 +329,7 @@
                 </ul>
             </div>
 
-            <div class="col-lg-4 col-md-6">
+            <div class="col-lg-3 col-md-6">
                 <h4>Horario</h4>
                 <p>
                     Lunes a Domingo <br>
@@ -310,5 +337,13 @@
                     14:30 – 20:00
                 </p>
             </div>
-    </body>
+
+            <div class="redes col-lg-3 col-md-6">
+                <h4>Redes Sociales</h4>
+                <ul>
+                    <li><a href="https://www.instagram.com/atacamapets/"><img src="assets/img/Instagram_logo.svg" alt="Logo de Instragram">Instagram</a></li>
+                    <li><a href="https://www.facebook.com/atacamapets/?locale=es_LA"><img src="assets/img/facebook_logo.svg" alt="Logo de Facebook">Facebook</a></li>
+                </ul>
+            </div>
+        </body>
 </html>
