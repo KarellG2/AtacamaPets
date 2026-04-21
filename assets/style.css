@@ -5,7 +5,7 @@
     --verde :    #a8d44a;
     --negro:   #0a1a17;
     --negro2:  #0f2420;
-    --info-card: #081412 ;
+    --info-card: #040a09 ;
     --gris : #d1d3d1;
     --blanco: #ffffff;
     --brillo: #0ff;
@@ -47,10 +47,9 @@ h2,h3,h4{
     border-bottom: 1px solid rgba(255,255,255,.08);
     padding: 16px 32px;
 }
-.navbar .navbar-toggler-icon{
-    opacity: 75%;
-    background-color: var(--verde) !important;
-}
+.navbar-toggler-icon { filter: invert(1); }
+.navbar-toggler { border-color: var(--verde); }
+
 /* BOTONES DE NAVEGACION */
 .nav-link{
     color: var(--gris);
@@ -137,8 +136,8 @@ section{
     z-index: 1;
 }
 .hero img{
-    height: 400px;
-    width: 700px;
+    height: 100%;
+    width: 100%;
     max-width: 120%;
     max-height: 120%;
     border-radius: 5%;
@@ -167,9 +166,6 @@ section{
 }
 
 /* SERVICIOS */
-h5{
-    font-size: 25px;
-}
 .services{
     background-color: var(--gris);
     position: relative;
@@ -184,13 +180,23 @@ h5{
 }
 
 .carousel-inner .carousel-item {
-    height: 750px;
+    height: 100%; width: 100%;
 }
 .carousel-inner .carousel-caption{
     color: var(--blanco);
     background-color: var(--negro);
-    opacity: 75%;
+    opacity: 70%;
     font-size: 20px;
+}
+@media (max-width: 768px) {
+    .carousel-inner .carousel-caption{
+        font-size: 12px;
+    }
+}
+@media (max-width: 768px){
+    .carousel-inner .carousel-caption h5{
+        font-size: 16px;
+    }
 }
 #nosotros{
     background: var(--negro2);
@@ -219,7 +225,7 @@ h5{
     opacity: 70%;
     transform: translateY(20px); 
     animation: slideIn 0.8s ease forwards;
-    transition: 0.5s;
+    transition: 1.3s;
     width: 100%;
     height: 100%;
 }
@@ -247,14 +253,24 @@ h5{
 }
 .card:hover{
     transform: var(--transform)!important;
+    box-shadow: 15px 15px 15px var(--brillo), 0 0 1px var(--brillo);
+;
 }
-
+.card h5{
+    font-size: 25px;
+}
+.card p{
+    font-size: 18px;
+}
 /* CONTACTOS */
 .emp-contact .card{
     width: 100%;
     margin-left: 0;
 }
-
+.emp-contact{
+    padding-top: 7%;
+    padding-bottom: 7%;
+}
 .card-container-contact {
     display: grid;
     grid-template-columns: repeat(2, minmax(300px, 1fr)); 
@@ -284,13 +300,17 @@ h5{
 }
 /* FOOTER */
 .footer-container{
-    background:var(--negro) ;
+    padding-top: 10%;
+    background:var(--info-card) ;
 }
 footer h4{
-    color: var(--gris);
-    margin-top: 25px;
-    text-align: center;
-    letter-spacing: 2px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--celeste);
+    margin-bottom: 20px;
 }
 footer p{
     color: var(--gris);
@@ -299,6 +319,9 @@ footer ul a{
     color: var(--gris);
     list-style: none;
     text-decoration: none;
+}
+footer li{
+    margin-bottom: 10%;
 }
 .redes img{
     width: 10%;
@@ -319,8 +342,16 @@ h2{
     justify-content: center;
     display: flex;
     margin-top: 25px;
+    width: 100% !important; 
+    height: 100% !important;
 }
-
+@media (max-width: 768px){
+    .map{
+        margin-left: 5%;
+        width: 90% !important;
+        height: 25% !important;
+    }
+}
 .contact-img{
     width: 25px;
     height: 25px;
@@ -368,7 +399,11 @@ h2{
     margin-bottom: 10%;
 }
 
-
+.map-container{
+    background: var(--negro2);
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
 /* --- SECCIÓN ESPECIALIDADES --- */
 #especialidades {
 background-color: var(--negro); 
@@ -402,7 +437,16 @@ width: 100%;
     transform: scale(1.1); 
 }
 .footer-emp-logo{
-    width: 35%; height: 35%;
+    border-radius: 15%;
+    width: 40%; 
+    height: 30%;
+    margin-bottom: 9%;
+}
+@media (max-width: 768px){
+    .footer-emp-logo{
+        width: 25% !important; 
+        height: 25% !important;
+    }
 }
 .contact-link{
     text-decoration: none;
