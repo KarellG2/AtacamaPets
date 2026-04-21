@@ -3,12 +3,15 @@
     --azul : #1a7a6e;
     --celeste : #29b89e;
     --verde :    #a8d44a;
-    --negro : #0d1f1c;
+    --negro:   #0a1a17;
+    --negro2:  #0f2420;
+    --info-card: #081412 ;
     --gris : #d1d3d1;
     --blanco: #ffffff;
     --brillo: #0ff;
     --grad: linear-gradient(135deg, #29b89e 0%, #a8d44a 100%);
     --grad-card: linear-gradient(15deg, #00ffd0 0%, #aeff00bf 100%);
+    --grad-info-card: linear-gradient(145deg, #162e29 0%, #1a3d35 100%);
     --transition: background-color 0.33s ease-in-out, color .33s ease-in-out;
     --transform: scale(108%);
     --transform_link: scale(112%);
@@ -126,8 +129,8 @@ section{
     color: var(--blanco);
 }
 .hero{
-    margin-top: 175px;
-    margin-bottom: 245px;
+    margin-top: 15.5%;
+    margin-bottom: 22.5%;
 }
 .hero .container{
     position: relative;
@@ -166,16 +169,16 @@ section{
 /* SERVICIOS */
 h5{
     font-size: 25px;
-    font-weight: bold;
 }
 .services{
     background-color: var(--gris);
     position: relative;
     width: 100%;
     height: 100%;
+    margin-bottom: 22.5%;
 }
 .services-title{
-    margin-top: 25px;
+    margin-top: 3%;
     color: var(--gris);
     text-align: center;
 }
@@ -188,7 +191,9 @@ h5{
     background-color: var(--negro);
     opacity: 75%;
     font-size: 20px;
-    font-weight: bold;
+}
+#nosotros{
+    background: var(--negro2);
 }
 .somos p{
     font-size: 20px;
@@ -197,7 +202,7 @@ h5{
 .card-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-    gap: 20px;
+    gap: 5%;
     margin-top: 30px;
     padding: 0 50px; 
     justify-content: center;
@@ -205,16 +210,18 @@ h5{
 .card{
     background: var(--grad-card) !important;
     border: none; 
-    border-radius: 24px;
+    border-radius: 5%;
     box-shadow: 0 10px 20px rgba(0,0,0,0.2);
     display: flex;
     flex-direction: column;
-    padding: 20px; 
+    padding: 5%; 
     margin: 0; 
-    opacity: 0;
+    opacity: 70%;
     transform: translateY(20px); 
     animation: slideIn 0.8s ease forwards;
-    transition: 0.3s;
+    transition: 0.5s;
+    width: 100%;
+    height: 100%;
 }
 .servicios .card .card-body{
     color: var(--negro);
@@ -239,7 +246,7 @@ h5{
     font-size: 25px;
 }
 .card:hover{
-    transform: translateY(10px)!important;
+    transform: var(--transform)!important;
 }
 
 /* CONTACTOS */
@@ -264,7 +271,17 @@ h5{
         
     }
 }
-
+.contact-p{
+    color:var(--gris);
+    font-size: 17px;
+    opacity: .8;
+    max-width: 500px;
+    margin: 0 auto;
+}
+.contact-logo{
+    width: 10%;
+    height: 10%;
+}
 /* FOOTER */
 .footer-container{
     background:var(--negro) ;
@@ -291,7 +308,8 @@ footer ul a{
 h2{
     color: var(--verde);
     text-align: center;
-    padding-bottom: 35px;
+    font-weight: 700;
+    line-height: 1.1;
 }
 .emp-info p{
     color: var(--gris);
@@ -302,11 +320,55 @@ h2{
     display: flex;
     margin-top: 25px;
 }
-.contact-logo{
+
+.contact-img{
     width: 25px;
     height: 25px;
 
 }
+.contact-info-grid{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.info-card{
+    padding: 5%;
+    background: var(--grad-info-card);
+    border: 1px solid var(--negro);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    transition: .3s ease;
+}
+.info-card:hover{
+    border-color: var(--celeste);
+    transform: translatex(4px);
+}
+.label-name{
+    font-size: 12px;
+    letter-spacing: 1.3px;
+    color: var(--celeste);
+}
+.label-value{
+    color: var(--gris);
+    font-weight: 500;
+    font-size: 15px;
+}
+.contact-card{
+    background: var(--grad-info-card);
+    border: 1px solid var(--negro);
+    border-radius: 20px;
+    padding: 5%;
+}
+.contact-card h4{ 
+    font-family: 'Fraunces', serif;
+    color: var(--blanco);
+    font-size: 24px;
+    margin-bottom: 10%;
+}
+
+
 /* --- SECCIÓN ESPECIALIDADES --- */
 #especialidades {
 background-color: var(--negro); 
@@ -320,7 +382,6 @@ width: 100%;
 }
 #especialidades .services-title {
     color: var(--verde); 
-    font-weight: bold;
     font-size: 2.5rem;
 }
 
@@ -333,17 +394,25 @@ width: 100%;
 }
 /* ESTILO PARA EL LOGO DE LA EMPRESA EN FOOTER*/
 .footer-logo {
-    width: 120px;
-    margin-bottom: 15px;
-}
-.footer-logo {
-    width: 120px;
+    width: 25;
     margin-bottom: 15px;
     transition: transform 0.3s ease; 
 }
 .footer-logo:hover {
     transform: scale(1.1); 
 }
-.footer-container{
-
+.footer-emp-logo{
+    width: 35%; height: 35%;
+}
+.contact-link{
+    text-decoration: none;
+    color: var(--gris);
+}
+.bottom-footer{
+    margin-top: 60px;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 13px;
+    color: var(--gris);
+    opacity: .4;
 }
